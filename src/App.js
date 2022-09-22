@@ -1,19 +1,23 @@
 import "./App.css";
-import MuiAutoComplete from "./mui/MuiAutoComplete";
-import MuiBox from "./mui/MuiBox";
-import MuiButton from "./mui/MuiButton";
-import MuiCard from "./mui/MuiCard";
-import MuiGrid from "./mui/MuiGrid";
-import MuiPaper from "./mui/MuiPaper";
-import MuiRating from "./mui/MuiRating";
-import MuiStack from "./mui/MuiStack";
-import MuiTypography from "./mui/MuiTypography";
+import { useEffect } from "react";
+
+import FocusInput from "./hooks/useRefo/FocusInput";
+import HookTimer from "./hooks/useRefo/HookTimer";
 
 const App = () => {
+
+  useEffect(() => {
+    document.title = 'Practice React'
+    return () => {
+      console.log('ditached app component');
+    }
+  }, [])
+  
   return (
     <div className="App">
-      {/* <MuiCard/> */}
-      
+     
+     {/* <FocusInput/> */}
+     {/* <HookTimer/> */}
     </div>
   );
 };
